@@ -10,9 +10,9 @@
 <body>
     <div class="all">
         <div class="heart" id=demo>
-            <div class="left"></div>
-            <div class="right"></div>
-            <div class="bottom"></div>
+            <div class="left" id="left"></div>
+            <div class="right" id="right"></div>
+            <div class="bottom" id="bottom"></div>
         </div>
         <button id=pause>暂停</button>
         <button id=con>继续</button>
@@ -21,9 +21,15 @@
     <script>
         pause.onclick = () => {
             demo.style.animationPlayState = 'paused';
+            left.style.animationPlayState = 'paused';
+            right.style.animationPlayState = 'paused';
+            bottom.style.animationPlayState = 'paused';
         };
         con.onclick = () => {
             demo.style.animationPlayState = 'running';
+            left.style.animationPlayState = 'running';
+            right.style.animationPlayState = 'running';
+            bottom.style.animationPlayState = 'running';
         };
     </script>
 </body>

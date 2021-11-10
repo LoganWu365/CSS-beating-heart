@@ -9,7 +9,7 @@
   .heart{
     position:relative;
     margin:200px;
-      animation:bomb 0.5s alternate infinite;
+    animation:bomb 0.5s alternate infinite;
   }
   @keyframes bomb {
     0% {
@@ -19,13 +19,22 @@
       transform:scale(1.2);
     }
   }
+  @keyframes color {
+    0% {
+      background-color: rgb(249,155,155);
+    }
+    100% {
+      background-color: red;
+    }
+  } 
   .heart > .left {
     width: 100px;
     height: 100px;
     position:absolute;
     transform:rotate(45deg) translateX(-80px);
     border-radius:50% 0% 0% 50%;
-    background-color:red;
+    background-color:rgb(249,155,155);
+    animation:color 0.5s alternate infinite;
   }
   .heart > .right {
     width: 100px;
@@ -33,14 +42,14 @@
     position:absolute;
       transform:rotate(45deg) translateY(-80px);
     border-radius:50% 50% 0% 0%;
-      background-color:red;
-  
-  
+      background-color:rgb(249,155,155);
+      animation:color 0.5s alternate infinite;
   }
   .heart > .bottom {
     width: 100px;
     height: 100px;
     transform:rotate(45deg);
-      background-color:red;
+      background-color:rgb(249,155,155);
     border-radius:0% 0% 10% 0%;
+    animation:color 0.5s alternate infinite;
   }
